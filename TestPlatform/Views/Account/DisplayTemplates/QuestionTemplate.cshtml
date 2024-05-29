@@ -1,0 +1,19 @@
+@model TestPlatform.Domain.Entity.Question
+
+<div class="card card-block" style="margin:1rem;">
+    <div class="card-block" style="padding:0.5rem;">
+        <h4 class="card-title">@Model.Text</h4>
+        <ul class="list-group list-group-flush" style="list-style-type: none;padding-left: 0;">
+            @foreach (var answer in Model.Answers)
+            {
+                <li>
+                    <input type="checkbox" name="answer" value="@answer.Id" @(answer.IsRight ? "checked" : "") disabled>
+                    @answer.Text
+                </li>
+            }
+        </ul>
+        <div class="card-footer d-flex justify-content-center" style="margin-top:1rem;">
+            <a class="btn btn-danger text-white" asp-action="DeleteQuestion" asp-route-id="@Model.Id"><i class="fa fa-minus-circle"></i></a> @* delete *@
+        </div>
+    </div>
+</div>

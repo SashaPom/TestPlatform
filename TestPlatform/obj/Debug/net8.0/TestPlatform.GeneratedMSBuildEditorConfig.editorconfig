@@ -1,0 +1,139 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = TestPlatform
+build_property.RootNamespace = TestPlatform
+build_property.ProjectDir = D:\!_DOCS\Desktop\Универ\C#\TestPlatform\TestPlatform\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\!_DOCS\Desktop\Универ\C#\TestPlatform\TestPlatform
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/\!_DOCS/Desktop/Универ/C\#/TestPlatform/TestPlatform/Views/Account/AddQuestionView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRRdWVzdGlvblZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\!_DOCS/Desktop/Универ/C\#/TestPlatform/TestPlatform/Views/Account/AssignTest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBc3NpZ25UZXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\!_DOCS/Desktop/Универ/C\#/TestPlatform/TestPlatform/Views/Account/Auth.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBdXRoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\!_DOCS/Desktop/Универ/C\#/TestPlatform/TestPlatform/Views/Account/DisplayTemplates/QuestionTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxEaXNwbGF5VGVtcGxhdGVzXFF1ZXN0aW9uVGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\!_DOCS/Desktop/Универ/C\#/TestPlatform/TestPlatform/Views/Account/DisplayTemplates/TestMentorTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxEaXNwbGF5VGVtcGxhdGVzXFRlc3RNZW50b3JUZW1wbGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\!_DOCS/Desktop/Универ/C\#/TestPlatform/TestPlatform/Views/Account/DisplayTemplates/TestStudentTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxEaXNwbGF5VGVtcGxhdGVzXFRlc3RTdHVkZW50VGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\!_DOCS/Desktop/Универ/C\#/TestPlatform/TestPlatform/Views/Account/DisplayTemplates/UserCardAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxEaXNwbGF5VGVtcGxhdGVzXFVzZXJDYXJkQWRtaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\!_DOCS/Desktop/Универ/C\#/TestPlatform/TestPlatform/Views/Account/DisplayTemplates/UserCardAssign.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxEaXNwbGF5VGVtcGxhdGVzXFVzZXJDYXJkQXNzaWduLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\!_DOCS/Desktop/Универ/C\#/TestPlatform/TestPlatform/Views/Account/DisplayTemplates/UserCardMentor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxEaXNwbGF5VGVtcGxhdGVzXFVzZXJDYXJkTWVudG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\!_DOCS/Desktop/Универ/C\#/TestPlatform/TestPlatform/Views/Account/DisplayTemplates/UserCardStudent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxEaXNwbGF5VGVtcGxhdGVzXFVzZXJDYXJkU3R1ZGVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\!_DOCS/Desktop/Универ/C\#/TestPlatform/TestPlatform/Views/Account/EditQuestions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxFZGl0UXVlc3Rpb25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\!_DOCS/Desktop/Универ/C\#/TestPlatform/TestPlatform/Views/Account/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\!_DOCS/Desktop/Универ/C\#/TestPlatform/TestPlatform/Views/Account/ProfileMentors.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQcm9maWxlTWVudG9ycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\!_DOCS/Desktop/Универ/C\#/TestPlatform/TestPlatform/Views/Account/ProfileStudents.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQcm9maWxlU3R1ZGVudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\!_DOCS/Desktop/Универ/C\#/TestPlatform/TestPlatform/Views/Account/ProfileStudentTests.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQcm9maWxlU3R1ZGVudFRlc3RzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\!_DOCS/Desktop/Универ/C\#/TestPlatform/TestPlatform/Views/Account/ProfileTests.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQcm9maWxlVGVzdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\!_DOCS/Desktop/Универ/C\#/TestPlatform/TestPlatform/Views/Account/Registration.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3RyYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\!_DOCS/Desktop/Универ/C\#/TestPlatform/TestPlatform/Views/Account/StudentJournal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTdHVkZW50Sm91cm5hbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\!_DOCS/Desktop/Универ/C\#/TestPlatform/TestPlatform/Views/Home/404.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVw0MDQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\!_DOCS/Desktop/Универ/C\#/TestPlatform/TestPlatform/Views/Home/DisplayTemplates/TestCard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEaXNwbGF5VGVtcGxhdGVzXFRlc3RDYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\!_DOCS/Desktop/Универ/C\#/TestPlatform/TestPlatform/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\!_DOCS/Desktop/Универ/C\#/TestPlatform/TestPlatform/Views/Home/Main.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNYWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\!_DOCS/Desktop/Универ/C\#/TestPlatform/TestPlatform/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\!_DOCS/Desktop/Универ/C\#/TestPlatform/TestPlatform/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\!_DOCS/Desktop/Универ/C\#/TestPlatform/TestPlatform/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\!_DOCS/Desktop/Универ/C\#/TestPlatform/TestPlatform/Views/Test/DisplayTest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdFxEaXNwbGF5VGVzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\!_DOCS/Desktop/Универ/C\#/TestPlatform/TestPlatform/Views/Test/TestResult.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdFxUZXN0UmVzdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\!_DOCS/Desktop/Универ/C\#/TestPlatform/TestPlatform/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\!_DOCS/Desktop/Универ/C\#/TestPlatform/TestPlatform/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\!_DOCS/Desktop/Универ/C\#/TestPlatform/TestPlatform/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-034hffkoqw

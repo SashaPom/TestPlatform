@@ -1,0 +1,95 @@
+@using TestPlatform.Models.UserModels
+@model TestPlatform.Models.UserModels.UserRegistrationModel
+
+@{
+    ViewData["Title"] = "Registrations";
+    var validationResult = ViewData["validationResults"] as UserValidationModel;
+}
+
+<div class="wrapper">
+    <div class="logo">
+        <img src="https://duikt.edu.ua/img/logo.png?2" alt="">
+    </div>
+    <div class="text-center mt-4 name">
+        Test Platform
+    </div>
+    <form class="p-3 mt-3" method="post" asp-controller="Account" asp-action="RegisterUser" enctype="multipart/form-data">
+        <div class="form-field d-flex align-items-center mt-2">
+            <span class="far fa-user" aria-hidden="true"></span>
+            <input type="text" name="login" id="login" asp-for="Login" placeholder="Username">
+        </div>
+        @if (validationResult?.LoginMessage is not null)
+        {
+            <div class="text-danger">
+                @validationResult.LoginMessage
+            </div>
+        }
+        <div class="form-field d-flex align-items-center mt-2">
+            <span class="fa fa-check" aria-hidden="true"></span>
+            <input type="text" name="realName" id="realName" asp-for="RealName" placeholder="Your name">
+        </div>
+        @if (validationResult?.RealNameMessage is not null)
+        {
+            <div class="text-danger">
+                @validationResult.RealNameMessage
+            </div>
+        }
+        <div class="form-field d-flex align-items-center mt-2">
+            <span class="far fa-address-book"></span>
+            <input type="email" name="email" id="email" asp-for="Email" placeholder="Email">
+        </div>
+        @if (validationResult?.EmailMessage is not null)
+        {
+            <div class="text-danger">
+                @validationResult.EmailMessage
+            </div>
+        }
+        <div class="form-field d-flex align-items-center mt-2">
+            <span class="fas fa-key" aria-hidden="true"></span>
+            <input type="password" name="password" id="pwd" asp-for="Password" placeholder="Password">
+        </div>
+        @if (validationResult?.PasswordMessage is not null)
+        {
+            <div class="text-danger">
+                @validationResult.PasswordMessage
+            </div>
+        }
+        <div class="form-field d-flex align-items-center mt-2">
+            <span class="fas fa-key" aria-hidden="true"></span>
+            <input type="password" name="repeatPassword" id="repPwd" asp-for="RepeatPassword" placeholder="Repeat password">
+        </div>
+        @if (validationResult?.RepeatPasswordMessage is not null)
+        {
+            <div class="text-danger">
+                @validationResult.RepeatPasswordMessage
+            </div>
+        }
+        <div class="mb-3 mt-2">
+            <span class="fas fa-upload" aria-hidden="true"></span>
+            <label for="formFile" class="form-label">Avatar</label>
+            <input class="form-control" type="file" id="formFile" asp-for="Avatar">
+        </div>
+        @if (validationResult?.AvatarMessage is not null)
+        {
+            <div class="text-danger">
+                @validationResult.AvatarMessage
+            </div>
+        }
+        <div class="form-check mt-2">
+            <input class="form-check-input" type="checkbox" id="isAgree" asp-for="IsAgree">
+            <label class="form-check-label" for="flexCheckDefault">
+                Я погоджуюся з <a asp-area="" asp-controller="Home" asp-action="Privacy">умовами використання</a>
+            </label>
+        </div>
+        @if (validationResult?.IsAgreeMessage is not null)
+        {
+            <div class="text-danger">
+                @validationResult.IsAgreeMessage
+            </div>
+        }
+        <button type="submit" class="btn mt-3">Зареєструватися</button>
+    </form>
+    <div class="text-center fs-6">
+        <a asp-controller="Home" asp-action="Index"><span class="bi bi-arrow-right-square"></span> Авторизуватися</a>
+    </div>
+</div>

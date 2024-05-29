@@ -1,0 +1,145 @@
+@model TestPlatform.Models.UserModels.ProfileTestsModel
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<section id="about-us" class="py-5">
+    <div class="container">
+        <div class="row">
+            <!--left sidebar-->
+            <div class="col-md-3 pr-md-4">
+                <div class="sidebar-left">
+                    <!--sidebar menu-->
+                    <ul class="list-unstyled sidebar-menu pl-md-2 pr-md-0">
+                        <li>
+                            <a class="sidebar-item d-flex justify-content-between align-items-center" asp-action="Profile" asp-controller="Account" asp-route-id="@Model.Login">
+                                Профіль
+                                <span class="fas fa-user"></span>
+                            </a>
+                        </li>
+                        @if (@Model.Role == "Mentor")
+                        {
+                            <li>
+                                <a class="sidebar-item d-flex justify-content-between align-items-center" asp-action="ProfileTestsEdit" asp-controller="Account" asp-route-id="@Model.Login">
+                                    Редагування тестів
+                                    <span class="fas fa-copy"></span>
+                                </a>
+                            </li>
+                        }
+                        @if (@Model.Role == "Student")
+                        {
+                            <li>
+                                <a class="sidebar-item d-flex justify-content-between align-items-center" asp-action="ProfileTests" asp-controller="Account" asp-route-id="@Model.Login">
+                                    Тести
+                                    <span class="fas fa-copy"></span>
+                                </a>
+                            </li>
+                        }
+                        <li>
+                            <a class="sidebar-item d-flex justify-content-between align-items-center" asp-action="ProfileStudents" asp-controller="Account" asp-route-id="@Model.Login">
+                                Студенти
+                                <span class="fas fa-user"></span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="sidebar-item d-flex justify-content-between align-items-center" asp-action="Logout" asp-controller="Account">
+                                Вихід
+                                <span class="fas fa-sign-out-alt"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--Content-->
+            <div class="col-md-9">
+                <div class="dashboard-area">
+                    <div class="mb-3 bg-dark">
+                        <div class="card-background p-3 rounded text-center shadow-sm">
+                            <div class="profiles mx-auto" style="max-width: 600px;">
+                                <div class="avatars">
+                                    <a href="#">
+                                        @if (String.IsNullOrEmpty(@Model.Avatar)) Model.Avatar = "mentorAvatar.png";
+                                        <img src="~/avatars/@Model.Avatar" alt="@Model.Login avatar" width="250px">
+                                    </a>
+                                </div>
+                                <div class="names">
+                                    <h3 class="title text-light">@Model.RealName</h3>
+                                    <h4 class="title text-light">Role: @Model.Role</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                @if (@Model.Role == "Mentor")
+                {
+                    <form asp-action="AddQuestion" method="post">
+                        <div class="form-group">
+                            <label asp-for="@Model.EditingQuestion.Text" class="control-label" style="font-weight: bolder">Текст питання:</label>
+                            <input asp-for="@Model.EditingQuestion.Text" class="form-control" placeholder="Введіть текст питання" />
+                        </div>
+                        <label style="font-weight: bolder">Відповіді:</label>
+                        <div class="form-group" style="margin-left: 0.7rem">
+                            <div class="form-group">
+                                <label>Перша відповідь:</label>
+                                <div class="input-group">
+                                    <input asp-for="@Model.EditingQuestion.Answers[0].Text" class="form-control" placeholder="Введіть текст відповіді" />
+                                </div>
+                                <div class="input-group mt-2">
+                                    <input asp-for="@Model.EditingQuestion.Answers[0].IsRight" type="checkbox" style="scale:1.5; margin-left: 0.5rem" class="mr-2" />
+                                    <label class="form-check-label" for="@Model.EditingQuestion.Answers[0].IsRight">Правильна відповідь</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group" style="margin-left: 0.7rem">
+                            <label>Друга відповідь:</label>
+                            <div class="input-group">
+                                <input asp-for="@Model.EditingQuestion.Answers[1].Text" class="form-control" placeholder="Введіть текст відповіді" />
+                            </div>
+                            <div class="input-group mt-2">
+                                <input asp-for="@Model.EditingQuestion.Answers[1].IsRight" type="checkbox" style="scale:1.5; margin-left: 0.5rem" class="mr-2" />
+                                <label class="form-check-label" for="@Model.EditingQuestion.Answers[1].IsRight">Правильна відповідь</label>
+                            </div>
+                        </div>
+                        <div class="form-group" style="margin-left: 0.7rem">
+                            <label>Третя відповідь:</label>
+                            <div class="input-group">
+                                <input asp-for="@Model.EditingQuestion.Answers[2].Text" class="form-control" placeholder="Введіть текст відповіді" />
+                            </div>
+                            <div class="input-group mt-2">
+                                <input asp-for="@Model.EditingQuestion.Answers[2].IsRight" type="checkbox" style="scale:1.5; margin-left: 0.5rem" class="mr-2" />
+                                <label class="form-check-label" for="@Model.EditingQuestion.Answers[2].IsRight">Правильна відповідь</label>
+                            </div>
+                        </div>
+                        <div class="form-group" style="margin-left: 0.7rem">
+                            <label>Четверта відповідь:</label>
+                            <div class="input-group">
+                                <input asp-for="@Model.EditingQuestion.Answers[3].Text" class="form-control" placeholder="Введіть текст відповіді" />
+                            </div>
+                            <div class="input-group mt-2">
+                                <input asp-for="@Model.EditingQuestion.Answers[3].IsRight" type="checkbox" style="scale:1.5; margin-left: 0.5rem" class="mr-2" />
+                                <label class="form-check-label" for="@Model.EditingQuestion.Answers[3].IsRight">Правильна відповідь</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="hidden" asp-for="@Model.EditingQuestion.TestId" value="@Model.EditingTestId" />
+                            <button type="submit" class="btn btn-primary">Додати це питання</button>
+                        </div>
+                    </form>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

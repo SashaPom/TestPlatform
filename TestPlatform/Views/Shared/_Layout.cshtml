@@ -1,0 +1,127 @@
+﻿@using System.Security.Claims
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Test Platform</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/TestPlatform.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid justify-content-between align-items-center">
+                @if (User.Identity is not null && User.Identity.IsAuthenticated)
+                {
+                    String userLogin = User.Claims.First(c => c.Type == ClaimTypes.NameIdentifier).Value;
+                    String userAvatar = User.Claims.First(c => c.Type == ClaimTypes.UserData).Value;
+                    String userRole = User.Claims.First(c => c.Type == ClaimTypes.Role).Value;
+                    if (String.IsNullOrEmpty(userAvatar))
+                    {
+                        switch (userRole)
+                        {
+                            case "Admin":
+                                userAvatar = "adminAvatar.jpg";
+                                break;
+                            case "Mentor":
+                                userAvatar = "mentorAvatar.png";
+                                break;
+                            case "Student":
+                                userAvatar = "studentAvatar.jpeg";
+                                break;
+                        }
+                    }
+                    <div class="d-flex">
+                        @if (userRole == "Student")
+                        {
+                            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Main">
+                                <img src="https://duikt.edu.ua/img/logo.png?2" width="80rem" alt="DuiktUniversity logo" />
+                            </a>
+                        } else
+                        {
+                            <a class="navbar-brand">
+                                <img src="https://duikt.edu.ua/img/logo.png?2" width="80rem" alt="DuiktUniversity logo" />
+                            </a>
+                        }
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                                @if (userRole == "Mentor")
+                                {
+                                    <li class="nav-item mx-1">
+                                        <a asp-action="ProfileTestsEdit" asp-controller="Account" asp-route-id="@userLogin">
+                                            Редагування тестів  <span class="fas fa-copy"></span>
+                                        </a>
+                                    </li>
+                                }
+                                @if (userRole == "Student")
+                                {
+                                    <li class="nav-item mx-1">
+                                        <a asp-action="Main" asp-controller="Home" asp-area="">
+                                            Головна  <span class="fas fa-copy"></span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item mx-1">
+                                        <a asp-action="ProfileTests" asp-controller="Account" asp-route-id="@userLogin">
+                                            Пройдені тести  <span class="fas fa-copy"></span>
+                                        </a>
+                                    </li>
+                                }
+                                <li class="nav-item mx-1">
+                                    <a asp-action="ProfileStudents" asp-controller="Account" asp-route-id="@userLogin">
+                                        Студенти  <span class="fas fa-user"></span>
+                                    </a>
+                                </li>
+                                <li class="nav-item mx-1">
+                                    <a asp-action="ProfileMentors" asp-controller="Account" asp-route-id="@userLogin">
+                                        Викладачі  <span class="fas fa-user"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <a asp-controller="Account" asp-action="Profile" asp-route-id="@userLogin">
+                            <img src="~/avatars/@userAvatar"
+                                 alt="@userLogin avatar"
+                                 width="80rem"
+                                 title="@userLogin" />
+                        </a>
+                        <a asp-controller="Account" asp-action="Logout"
+                           title="Вихід" class="mx-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
+                                <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+                            </svg>
+                        </a>
+                    </div>
+                }
+                else
+                {
+                    <a class="navbar-brand" asp-area="" asp-controller="Account" asp-action="Auth">
+                        <img src="https://duikt.edu.ua/img/logo.png?2" width="80rem" alt="DuiktUniversity logo" />
+                    </a>
+                }
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

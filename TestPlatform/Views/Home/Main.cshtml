@@ -1,0 +1,16 @@
+@using System.Net.Mime
+@using TestPlatform.Domain.Entity
+@model TestPlatform.Models.TestModels.MainViewModel
+@{
+    ViewData["Title"] = "Question list";
+}
+
+<p>Your opened Tests</p>
+<div class="container">
+    <div class="row">
+        @foreach (var test in @Model.Tests)
+        {
+            @Html.DisplayFor(t=>test, "TestCard");
+        }
+    </div>
+</div>
